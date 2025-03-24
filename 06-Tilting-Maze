@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <title>المتاهة المائلة</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="icon.png" />
+  </head>
+  <body>
+    <div id="center">
+      <div id="game">
+        <div id="maze">
+          <div id="end"></div>
+        </div>
+        <div id="joystick">
+          <div class="joystick-arrow"></div>
+          <div class="joystick-arrow"></div>
+          <div class="joystick-arrow"></div>
+          <div class="joystick-arrow"></div>
+          <div id="joystick-head"></div>
+        </div>
+        <div id="note">
+          انقر على عصا التحكم للبدء!
+          <p>حرك كل الكرات إلى المركز. جاهز للوضع الصعب؟ اضغط H</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

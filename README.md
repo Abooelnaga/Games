@@ -68,18 +68,34 @@
 
 ### 1️⃣1️⃣ Fruit Slicer
 **وصف:** استخدم مهاراتك في التقطيع لتقطيع الفواكه أثناء سقوطها وتجنب القنابل في هذه اللعبة السريعة. 🍉🔪  
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
-**طريقة التحميل:** `git clone https://github.com/yourrepo/fruit-slicer.git`
 
+**مشاهده حية:** 
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+**طريقة التحميل:** 
+   ```bash
+   git clone https://github.com/Abooelnaga/NagaHub.git
+   ```
 ### 1️⃣2️⃣ 2048
 **وصف:** حرك البلاطات الرقمية واجمعها معًا للوصول إلى الرقم 2048 في هذه اللعبة الذهنية الممتعة. 🧩  
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
-**طريقة التحميل:** `git clone https://github.com/yourrepo/2048.git`
 
+**مشاهده حية:** 
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+**طريقة التحميل:** 
+   ```bash
+   git clone https://github.com/Abooelnaga/NagaHub.git
+   ```
 ### 1️⃣3️⃣ Crossy Road
 **وصف:** ساعد الشخصية على عبور الطرق والأنهار مع تجنب العقبات في هذه اللعبة الحماسية. 🚦  
+
+**مشاهده حية:** 
+
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
-**طريقة التحميل:** `git clone https://github.com/yourrepo/crossy-road.git`
+**طريقة التحميل:** 
+   ```bash
+   git clone https://github.com/Abooelnaga/NagaHub.git
+   ```
 
 ---
 

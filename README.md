@@ -20,7 +20,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/02-Archery)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -31,7 +31,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/03-Breakout)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -42,7 +42,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/04-Tower-Blocks)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -53,7 +53,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/05-Tetris)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -64,7 +64,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/06-Tilting-Maze)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -75,7 +75,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/07-Memory-Card)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -86,7 +86,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/08-XO)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -97,7 +97,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/09-Snake)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -107,7 +107,7 @@
 **وصف:** اختبر سرعة رد فعلك عن طريق ضرب الحُفر التي يظهر فيها الخُلد قبل أن يختفي. 🕹️  
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/10-Whack-A-Mole)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -118,7 +118,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/11-Fruit-Slicer)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -128,7 +128,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/12-2048)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git
@@ -138,7 +138,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/13-Crossy-Road)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git

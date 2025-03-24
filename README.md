@@ -9,7 +9,7 @@
 
 **مشاهده حية:** 
 
-[![Live Demo]([https://img.shields.io/badge/Live%20Demo-](https://abooelnaga.github.io/Games/01-Candy-Crush/)🔗-blue)](#)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/01-Candy-Crush/)  
 **طريقة التحميل:** 
    ```bash
    git clone https://github.com/Abooelnaga/NagaHub.git

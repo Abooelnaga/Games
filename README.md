@@ -12,7 +12,7 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/01-Candy-Crush/)  
 **طريقة التحميل:** 
    ```bash
-   git clone https://github.com/Abooelnaga/Games/01-Candy-Crush.git
+   git clone https://github.com/Abooelnaga/Games/tree/main/01-Candy-Crush.git
    ```
 
 ### 2️⃣ Archery

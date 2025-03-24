@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap");
+
+:root {
+  --background-color: #7f7fd5;
+  --background-secondary-color: #91eae4;
+  --canvas-color: #f0f0f0;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --sidebar-color: #343457;
+  --button-color: #86a8e7;
+  --hover-color: #7db3e3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  background: linear-gradient(
+    to right,
+    var(--background-color),
+    var(--button-color),
+    var(--background-secondary-color)
+  );
+  font-family: "Tajawal", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+canvas {
+  background-color: var(--canvas-color);
+  display: block;
+  border-radius: 5px;
+  width: 95vw;
+  height: 80vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
+  color: var(--text-color);
+  margin: 1rem 0;
+}
+
+.rules {
+  width: min(400px, 90vw);
+  transform: translateX(100%);
+}
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0.625rem 1.25rem;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.rules-btn {
+  position: absolute;
+  top: 1.875rem;
+  right: 1.875rem;  /* Change from left to right */
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  right: 0;  /* Change from left to right */
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  width: 400px;
+  padding: 3rem;
+  line-height: 1.5;
+  transform: translateX(400px);  /* Change from -400px to 400px */
+  transition: transform 1s ease-in-out;
+}
+
+.rules.show {
+  transform: translateX(0);
+}

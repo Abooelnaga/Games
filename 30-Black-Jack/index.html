@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاك جاك</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="blackjack.css">
+    <script src="blackjack.js"></script>
+</head>
+
+<body>
+    <h2>الديلر: <span id="dealer-sum"></span></h2>
+    <div id="dealer-cards">
+        <img id="hidden" src="./cards/BACK.png">
+    </div>
+
+    <h2>أنت: <span id="your-sum"></span></h2>
+    <div id="your-cards"></div>
+
+    <br>
+    <button id="hit">اسحب</button>
+    <button id="stay">قف</button>
+    <p id="results"></p>
+</body>
+
+</html>

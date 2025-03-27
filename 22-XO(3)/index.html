@@ -1,0 +1,47 @@
+<html lang="ar">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة إكس أو</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body onload="initialize()">
+    <h1>لعبة إكس أو</h1>
+    <table id="table_game">
+      <tr><td class="td_game"><div id="cell0" onclick="cellClicked(this.id)" class="fixed"></div></td><td class="td_game"><div id="cell1" onclick="cellClicked(this.id)" class="fixed"></div></td><td class="td_game"><div id="cell2" onclick="cellClicked(this.id)" class="fixed"></div></td></tr>
+      <tr><td class="td_game"><div id="cell3" onclick="cellClicked(this.id)" class="fixed"></div></td><td class="td_game"><div id="cell4" onclick="cellClicked(this.id)" class="fixed"></div></td><td class="td_game"><div id="cell5" onclick="cellClicked(this.id)" class="fixed"></div></td></tr>
+      <tr><td class="td_game"><div id="cell6" onclick="cellClicked(this.id)" class="fixed"></div></td><td class="td_game"><div id="cell7" onclick="cellClicked(this.id)" class="fixed"></div></td><td class="td_game"><div id="cell8" onclick="cellClicked(this.id)" class="fixed"></div></td></tr>
+    </table>
+    <div id="restart" title="ابدأ لعبة جديدة" onclick="restartGame(true)"><span style="vertical-align:top;position:relative;top:-10px">#</span></div>
+    <table>
+      <tr><th class="th_list">الحاسوب</th><th class="th_list" style="padding-right:10px;padding-left:10px">تعادل</th><th class="th_list">اللاعب</th></tr>
+      <tr><td class="td_list" id="computer_score">0</td><td class="td_list" style="padding-right:10px;padding-left:10px" id="tie_score">0</td><td class="td_list" id="player_score">0</td></tr>
+    </table>
+    <div id="winAnnounce" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('winAnnounce')">×</span>
+        <p id="winText"></p>
+      </div>
+    </div>
+    <div id="userFeedback" class="modal">
+      <div class="modal-content">
+        <p id="questionText"></p>
+        <p><button id="yesBtn">نعم</button> <button id="noBtn">لا</button></p>
+      </div>
+    </div>
+    <div id="optionsDlg" class="modal">
+      <div class="modal-content">
+        <h2>كيف تريد أن تلعب؟</h2>
+          <h3>مستوى الصعوبة:</h3>
+          <label><input type="radio" name="difficulty" id="r0" value="0">سهل </label>
+          <label><input type="radio" name="difficulty" id="r1" value="1" checked>صعب</label><br>
+          <h3>اللعب كـ:</h3>
+          <label><input type="radio" name="player" id="rx" value="x" checked>X (ابدأ أولاً) </label>
+          <label><input type="radio" name="player" id="ro" value="o">O<br></label>
+          <p><button id="okBtn" onclick="getOptions()">العب</button></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

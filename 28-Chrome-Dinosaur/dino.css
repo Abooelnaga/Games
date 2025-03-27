@@ -1,0 +1,31 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+}
+
+#board {
+    background-color: lightgray;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+#restartBtn {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* Position the button */
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#restartBtn:hover {
+    background-color: #45a049;
+}

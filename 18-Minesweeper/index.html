@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <title>كانسة الألغام</title>
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <h1>كانسة الألغام</h1>
+      <div class="legend">
+        <p><strong>علم:</strong> <code><span class="key">alt</span>+<span class="click">نقر</span></code></p>
+      </div>
+    </div>
+  </header>
+  <main class="site-main" role="main">
+    <div class="wrap">
+      <div id="board">
+        <div class="top">
+          <div id="scoreboard">
+            <div id="minecounter" class="counter"></div>
+            <div>
+              <div class="select-wrap">
+                <select name="level" id="level">
+                  <option value="beginner">مبتدئ</option>
+                  <option value="intermediate">متوسط</option>
+                  <option value="expert" selected>خبير</option>
+                </select>
+              </div>
+              <button class="reset">?</button>
+            </div>
+            <div id="timer" class="counter"></div>
+          </div>
+          <div id="grid"></div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

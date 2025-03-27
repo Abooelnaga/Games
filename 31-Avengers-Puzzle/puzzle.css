@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tajawal',sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    border: 3px solid purple;
+    border-radius: 5px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#board img {
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    border: 0.5px solid lightblue;
+    cursor: pointer;
+}
+
+
+#pieces {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 160px;
+    border: 3px solid purple;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+#pieces img {
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    border: 0.5px solid lightblue;
+    margin: 2px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#pieces img:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: purple;
+    margin: 10px 0 20px;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: purple;
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}

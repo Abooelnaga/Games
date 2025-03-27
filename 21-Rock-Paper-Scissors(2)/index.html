@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>حجرة ورقة مقص</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>حجرة ورقة مقص</h1>
+  <div class="scoreboard">
+    <div class="player-score">اللاعب: 0</div>
+    <div class="computer-score">الحاسوب: 0</div>
+  </div>
+  <div class="choices">
+    <div class="choice" id="rock">
+      <i class="fas fa-hand-rock"></i>
+    </div>
+    <div class="choice" id="paper">
+      <i class="fas fa-hand-paper"></i>
+    </div>
+    <div class="choice" id="scissors">
+      <i class="fas fa-hand-scissors"></i>
+    </div>
+  </div>
+  <div class="result" id="result">
+    <p>!اختر سلاحك</p>
+  </div>
+  <div id="computer-choice"></div>
+  <div class="timer" id="timer">
+    <p>الوقت المتبقي: <span id="countdown">10</span> ثواني</p>
+  </div>
+  <button class="play-again" id="play-again">العب مرة أخرى</button>
+  <script src="script.js"></script>
+</body>
+
+</html>

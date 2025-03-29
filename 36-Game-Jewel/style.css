@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+	padding: 2rem;
+	font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, sans-serif;
+	direction: rtl;
+}
+
+h1 {
+	font-size: 16px;
+	margin-top: 0;
+}
+
+p {
+	color: rgb(107, 114, 128);
+	font-size: 15px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.card {
+	max-width: 620px;
+	margin: 0 auto;
+	padding: 16px;
+	border: 1px solid lightgray;
+	border-radius: 16px;
+}
+
+.card p:last-child {
+	margin-bottom: 0;
+}

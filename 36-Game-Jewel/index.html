@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مباراة الجواهر</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+        @font-face {
+            font-family: 'Tajawal';
+            src: url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+        }
+        body {
+            margin: 0;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Tajawal', sans-serif;
+        }
+        #gameContainer {
+            position: relative;
+        }
+        canvas {
+            border: 2px solid #333;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        #ui {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 20px;
+        }
+        #score {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui">
+            <div id="score">النقاط: 0</div>
+            <div id="moves">الحركات: 30</div>
+        </div>
+        <audio id="bgMusic" loop>
+            <source src="music1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+<script>
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const bgMusic = document.getElementById('bgMusic');
+const GRID_SIZE = 8;
+const CELL_SIZE = 70;
+const ANIMATION_SPEED = 0.15;
+// Start background music
+window.addEventListener('load', () => {
+    bgMusic.play().catch(error => {
+        console.log("Audio autoplay failed:", error);
+    });
+});
+canvas.width = GRID_SIZE * CELL_SIZE;
+canvas.height = GRID_SIZE * CELL_SIZE;
+const GEMS = {
+    RUBY: {color: '#ff0000', highlight: '#ff6666'},
+    SAPPHIRE: {color: '#0000ff', highlight: '#6666ff'},
+    EMERALD: {color: '#00ff00', highlight: '#66ff66'},
+    DIAMOND: {color: '#ffffff', highlight: '#aaaaaa'},
+    TOPAZ: {color: '#ffff00', highlight: '#ffff66'},
+    AMETHYST: {color: '#ff00ff', highlight: '#ff66ff'}
+};
+let score = 0;
+let moves = 30;
+let board = [];
+let selectedGem = null;
+let animations = [];
+let isAnimating = false;
+class Gem {
+    constructor(type, row, col) {
+        this.type = type;
+        this.row = row;
+        this.col = col;
+        this.x = col * CELL_SIZE;
+        this.y = row * CELL_SIZE;
+        this.targetX = this.x;
+        this.targetY = this.y;
+        this.scale = 1;
+        this.alpha = 1;
+    }
+    draw() {
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.translate(this.x + CELL_SIZE/2, this.y + CELL_SIZE/2);
+        ctx.scale(this.scale, this.scale);
+        
+        // Draw gem base
+        ctx.beginPath();
+        ctx.arc(0, 0, CELL_SIZE/2 - 10, 0, Math.PI * 2);
+        ctx.fillStyle = GEMS[this.type].color;
+        ctx.fill();
+        
+        // Draw highlight
+        ctx.beginPath();
+        ctx.arc(-10, -10, 10, 0, Math.PI * 2);
+        ctx.fillStyle = GEMS[this.type].highlight;
+        ctx.fill();
+        
+        ctx.restore();
+    }
+    update() {
+        if(this.x !== this.targetX) {
+            this.x += (this.targetX - this.x) * ANIMATION_SPEED;
+        }
+        if(this.y !== this.targetY) {
+            this.y += (this.targetY - this.y) * ANIMATION_SPEED;
+        }
+    }
+}
+function initBoard() {
+    for(let row = 0; row < GRID_SIZE; row++) {
+        board[row] = [];
+        for(let col = 0; col < GRID_SIZE; col++) {
+            const gemTypes = Object.keys(GEMS);
+            const randomType = gemTypes[Math.floor(Math.random() * gemTypes.length)];
+            board[row][col] = new Gem(randomType, row, col);
+        }
+    }
+}
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Draw board
+    for(let row = 0; row < GRID_SIZE; row++) {
+        for(let col = 0; col < GRID_SIZE; col++) {
+            if(board[row][col]) {
+                board[row][col].draw();
+            }
+        }
+    }
+    // Draw selected gem highlight
+    if(selectedGem) {
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(
+            selectedGem.col * CELL_SIZE,
+            selectedGem.row * CELL_SIZE,
+            CELL_SIZE,
+            CELL_SIZE
+        );
+    }
+    requestAnimationFrame(draw);
+}
+function update() {
+    for(let row = 0; row < GRID_SIZE; row++) {
+        for(let col = 0; col < GRID_SIZE; col++) {
+            if(board[row][col]) {
+                board[row][col].update();
+            }
+        }
+    }
+}
+function handleClick(e) {
+    if(isAnimating) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const col = Math.floor(x / CELL_SIZE);
+    const row = Math.floor(y / CELL_SIZE);
+    
+    if(col >= 0 && col < GRID_SIZE && row >= 0 && row < GRID_SIZE) {
+        if(!selectedGem) {
+            selectedGem = board[row][col];
+        } else {
+            // Check if adjacent
+            const rowDiff = Math.abs(selectedGem.row - row);
+            const colDiff = Math.abs(selectedGem.col - col);
+            
+            if((rowDiff === 1 && colDiff === 0) || (rowDiff === 0 && colDiff === 1)) {
+                swapGems(selectedGem, board[row][col]);
+            }
+            selectedGem = null;
+        }
+    }
+}
+function swapGems(gem1, gem2) {
+    const tempX = gem1.targetX;
+    const tempY = gem1.targetY;
+    const tempRow = gem1.row;
+    const tempCol = gem1.col;
+    
+    gem1.targetX = gem2.targetX;
+    gem1.targetY = gem2.targetY;
+    gem1.row = gem2.row;
+    gem1.col = gem2.col;
+    
+    gem2.targetX = tempX;
+    gem2.targetY = tempY;
+    gem2.row = tempRow;
+    gem2.col = tempCol;
+    
+    board[gem1.row][gem1.col] = gem1;
+    board[gem2.row][gem2.col] = gem2;
+    
+    moves--;
+    document.getElementById('moves').textContent = `الحركات: ${moves}`;
+    
+    setTimeout(checkMatches, 300);
+}
+
+function removeMatches(matches) {
+    isAnimating = true;
+    
+    // Remove matched gems
+    matches.forEach(({row, col}) => {
+        if(board[row][col]) {
+            score += 10;
+            document.getElementById('score').textContent = `النقاط: ${score}`;
+            board[row][col] = null;
+        }
+    });
+    // Drop remaining gems
+    for(let col = 0; col < GRID_SIZE; col++) {
+        let emptySpaces = 0;
+        for(let row = GRID_SIZE-1; row >= 0; row--) {
+            if(!board[row][col]) {
+                emptySpaces++;
+            } else if(emptySpaces > 0) {
+                const gem = board[row][col];
+                gem.row += emptySpaces;
+                gem.targetY = gem.row * CELL_SIZE;
+                board[gem.row][col] = gem;
+                board[row][col] = null;
+            }
+        }
+        
+        // Fill empty spaces with new gems
+        for(let row = emptySpaces-1; row >= 0; row--) {
+            const gemTypes = Object.keys(GEMS);
+            const randomType = gemTypes[Math.floor(Math.random() * gemTypes.length)];
+            const newGem = new Gem(randomType, row, col);
+            newGem.y = -CELL_SIZE;
+            newGem.targetY = row * CELL_SIZE;
+            board[row][col] = newGem;
+        }
+    }
+    setTimeout(() => {
+        isAnimating = false;
+        checkMatches();
+    }, 500);
+}
+canvas.addEventListener('click', handleClick);
+function gameLoop() {
+    update();
+    requestAnimationFrame(gameLoop);
+}
+initBoard();
+gameLoop();
+draw();
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لعبة إكس أو</title>
+  <link rel="icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>لعبة إكس أو</h1>
+
+  <!-- Selection Container -->
+  <div class="selection-container">
+    <!-- Symbol Selection (Left Side) -->
+    <div class="symbol-selection">
+      <label>اختر الرمز</label>
+      <div class="radio-input">
+        <label class="label">
+          <input type="radio" id="symbol-x" name="symbol-radio" value="X" checked />
+          <span class="text">إكس</span>
+        </label>
+        <label class="label">
+          <input type="radio" id="symbol-o" name="symbol-radio" value="O" />
+          <span class="text">أو</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Player Mode Selection (Right Side) -->
+    <div class="player-mode">
+      <label>اختر وضع اللعب</label>
+      <div class="radio-input">
+        <label class="label">
+          <input type="radio" id="mode-friend" name="mode-radio" value="friend" checked />
+          <span class="text">ضد صديق</span>
+        </label>
+        <label class="label">
+          <input type="radio" id="mode-computer" name="mode-radio" value="computer" />
+          <span class="text">ضد الكمبيوتر</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="board">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+
+  <p id="status"></p>
+  <div class="buttons">
+    <button class="btn" id="restart">
+      <span></span>
+      <p data-start="حظاً سعيداً!" data-text="ابدأ!" data-title="لعبة جديدة"></p>
+    </button>
+  </div>
+
+  <script src="mine.js"></script>
+</body>
+
+</html>

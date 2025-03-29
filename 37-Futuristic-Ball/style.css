@@ -1,0 +1,72 @@
+/* Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #0f0f0f, #131313);
+    font-family: 'Tajawal', 'Arial', sans-serif;
+    color: white;
+    overflow: auto;
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ball {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #00FFAB, #00B89C);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 171, 0.8);
+}
+
+.platform {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(to left, #FF007A, #E5006D);
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Changed from left to right for RTL */
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0, 255, 171, 0.8);
+}
+
+#level {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Changed from right to left for RTL */
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0, 255, 171, 0.8);
+}
+
+#lives {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;  /* Sama dengan ukuran skor dan level */
+}
+
+.life {
+    margin-right: 10px;
+    color: red; /* Red hearts */
+    font-size: 24px;  /* Sama dengan ukuran skor dan level */
+}

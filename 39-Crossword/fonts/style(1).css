@@ -1,0 +1,48 @@
+/*---------------- Start Global--------------------*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {height: 6000px;background-color: #fafafa;}
+.contianer {
+    width: 1200px;
+    margin: auto;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*---------------- End Global--------------------*/
+.Carts .job {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 60%;
+    height: 300px;
+    background: url('../img/bg.png') center center no-repeat;
+    overflow: hidden;
+} 
+.Carts .job .photo {
+    margin-left: 20px;
+    float: left;
+    width: 23%;
+}
+.Carts .job .photo img {
+    width: 170px;
+    height: 170px;
+    border-radius: 100px;
+    border: 2px solid rgb(237, 125, 49);
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+.Carts .job .photo h3 {
+    margin-top: 5px;
+    margin-left: 35px;
+    font-weight:bold ;
+    font-style: italic;
+    color: rgb(46,117,182);
+}
+.Carts .job .info {
+    width: 77%;
+}

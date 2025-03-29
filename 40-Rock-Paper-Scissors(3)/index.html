@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجر - ورقة - مقص</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="Game.CSS">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Whole_body">
+        <div class="container">
+            <div class="ScoreBoard" style="position: relative;" id="ScoreBoard">
+                <label for="ScoreBoard" id="labelScore">لوحة النتائج</label>
+                <ul style="display: flex; list-style-type:none; padding-right: 0; padding-left: 0; justify-content: space-around; direction: rtl;">
+                    <div class="vl"></div>
+                    <li style="text-align: center; margin-right: 20px;">
+                        <b style="color:navy; font-size: 18px;">المستخدم</b> 
+                        <br>
+                        <b><p style="margin: 5px 0;" id="User_result">0</p></b>
+                    </li>
+                    <li style="text-align: center; margin-right: 20px;">
+                        <b style="color:navy; font-size: 18px;">الكمبيوتر</b> 
+                        <br>
+                        <b><p style="margin: 5px 0;" id="PC_result">0</p></b>
+                    </li>
+                </ul>
+            </div>
+            <div class="resultField">
+                <div class="resultImages">
+                    <span id="USER_Result" class="userResult"><img src="477914-200.png" alt=""><p style="font-weight: bolder;font-size: x-large;">المستخدم</p></span>
+                    <span class="cpuResult"><img src="477914-200.png" alt=""><p style="font-weight: bolder; font-size: x-large;">الكمبيوتر</p></span>
+                </div>
+                <div class="result">لنلعب</div>
+            </div>
+            <div class="optionImages">
+                <span class="optionImage" title="اضغط للاختيار، اضغط مرتين لإلغاء الاختيار" ondblclick="RemoveChoice(this)" onmouseover="imgHoverin(this)" onmouseleave="imgHoverout(this)"><img src="477912-200.png" alt=""><p style="font-weight: bolder; font-size: x-large;">ورقة</p></span>
+                <span class="optionImage" title="اضغط للاختيار، اضغط مرتين لإلغاء الاختيار" ondblclick="RemoveChoice(this)" onmouseover="imgHoverin(this)" onmouseleave="imgHoverout(this)"><img src="477914-200.png" alt=""><p style="font-weight: bolder; font-size: x-large;">حجر</p></span>
+                <span class="optionImage" title="اضغط للاختيار، اضغط مرتين لإلغاء الاختيار" ondblclick="RemoveChoice(this)" onmouseover="imgHoverin(this)" onmouseleave="imgHoverout(this)"><img src="477919-200.png" alt=""><p style="font-weight: bolder; font-size: x-large;">مقص</p></span>
+            </div>
+            <div id="btnReset" style="">
+                <input type="button" value="إعادة النتائج" onclick="RemoveChoice(this)">
+            </div>
+        </div>
+    </div>
+    <script src="Game.JS"></script>
+</body>
+</html>

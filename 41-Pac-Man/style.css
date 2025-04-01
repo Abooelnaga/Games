@@ -1,0 +1,74 @@
+body {
+    background-color: #111;
+    /* Dark background */
+    color: #eee;
+    font-family: 'Tajawal', sans-serif;
+    /* Arabic font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    /* Hide scrollbars if canvas is large */
+    direction: rtl;
+    /* Right to left for Arabic */
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #f0f030;
+    /* Retro Yellow */
+    margin-bottom: 10px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+}
+
+.score-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5em;
+    color: #eee;
+}
+
+#score {
+    color: #f0f030;
+    /* Retro Yellow */
+    font-weight: bold;
+}
+
+canvas {
+    background-color: #000;
+    /* Black canvas background */
+    border: 5px solid #3030f0;
+    /* Retro Blue border */
+    display: block;
+    /* Prevents extra space below canvas */
+    margin: 0 auto;
+    /* Center canvas */
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f0f030;
+    padding: 30px;
+    border: 2px solid #f0f030;
+    font-size: 2em;
+    text-align: center;
+    z-index: 10;
+    /* Ensure message is on top */
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+}
+
+.hidden {
+    display: none;
+}

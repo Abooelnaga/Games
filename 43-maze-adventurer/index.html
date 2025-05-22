@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Maze Adventurer</title>
+    <link href="assets/fonts/press-start-2p.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Maze Adventurer</h1>
+        <div class="difficulty-buttons">
+            <button class="difficulty-button" data-size="10">Easy</button>
+            <button class="difficulty-button" data-size="15">Medium</button>
+            <button class="difficulty-button" data-size="20">Hard</button>
+        </div>
+        <canvas id="mazeCanvas"></canvas>
+        <div class="button-container">
+            <button id="startButton">
+                <img src="assets/icons/play.svg" alt="Start" class="icon">
+                Start
+            </button>
+            <button id="solveButton">
+                <img src="assets/icons/zap.svg" alt="Solve" class="icon">
+                Solve
+            </button>
+            <button id="newGameButton" style="display: none;">
+                <img src="assets/icons/rotate-ccw.svg" alt="New Game" class="icon">
+                New Game
+            </button>
+        </div>
+        <div id="messageContainer"></div>
+        <div id="gameWonContainer" class="hidden">
+            <h2>Congratulations!</h2>
+            <p>You found your way out of the maze!</p>
+            <button id="newGameButtonWin">
+                <img src="assets/icons/rotate-ccw.svg" alt="New Game" class="icon">
+                New Game
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/tone.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

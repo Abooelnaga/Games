@@ -284,7 +284,7 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-🔗-blue)](https://abooelnaga.github.io/Games/46-Stick-Hero/)  
 
 
-4️⃣7️⃣ 🏗️ Tower Blocks (2)
+### 4️⃣7️⃣ 🏗️ Tower Blocks (2)
 **وصف:** قم ببناء برج من الكتل بمهارة وحاول الحفاظ عليه متزنًا لأطول فترة ممكنة. 🏢🔝  
 
 🔗 **مشاهدة حية:**  

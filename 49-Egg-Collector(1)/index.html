@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Collector Game</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <span id="score">Score: 0</span>
+            <span id="lives">Lives: 3</span>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="controls">
+            <button id="leftButton" class="control-button">Left</button>
+            <button id="rightButton" class="control-button">Right</button>
+        </div>
+    </div>
+
+    <div id="messageBox" class="message-box">
+        <p id="messageText"></p>
+        <button id="startButton">Start Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
